@@ -20,6 +20,13 @@ tags:
 clean:
 	rm -f $(HPDEMO_LIB_TARGET) tags
 
+read: data-read
+	./data-read
+
+data-read: data-read.c
+	$(CC) -o data-read data-read.c
+
+
 prefix=/usr/local
 LIBDIR=$(prefix)/lib
 BINDIR=$(prefix)/bin
